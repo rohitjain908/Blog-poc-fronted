@@ -36,3 +36,34 @@ button {
   padding: 0.5rem 1rem;
   font-weight: bold;
 }
+
+
+.info-container {
+  flex: 1;
+  padding: 60px 48px;
+  justify-content: start;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.tag-without-border {
+  font-size: 14px;
+  line-height: 24px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+
+  /* identical to box height, or 171% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag-light {
+  color: #858e9d;
+}
