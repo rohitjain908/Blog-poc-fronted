@@ -1,11 +1,13 @@
-import styles from "../../styles/Home.module.css";
-import "../../styles/globals.css";
-import "../../styles/app.scss";
+import styles from "../../styles/Home.module.scss";
+import { getFormattedDate } from "../../utils";
 
 export default function BlogThumnail({ blog }) {
   return (
-    <div className="resource-card flex flex-col xl:transition xl:duration-300 xl:ease-in-out mb-12 xl:mb-0 first-item">
-      <a target="_blank" href={`http://localhost:3000/blogs/${blog.id}`}>
+    <div className="resource-card flex flex-col xl:transition xl:duration-300 xl:ease-in-out mb-12 first-item">
+      <a
+        target="_blank"
+        href={`http://localhost:3000/blogs/${blog?.id ? blog?.id : 1}`}
+      >
         <div className="img-container">
           <img
             className="xl:transition xl:duration-300 xl:ease-in-out"
@@ -25,9 +27,16 @@ export default function BlogThumnail({ blog }) {
             >
               •
             </div>
-            <div className="tag-without-border tag-light pb-2">Jan 2006</div>
+            <div className="tag-without-border tag-light pb-2">
+              {blog?.attributes
+                ? getFormattedDate(blog?.attributes?.date)
+                : "JAN 2006"}
+            </div>
           </div>
-          <h4 className="heading-medium">{blog.attributes.title}</h4>
+          <h4 className="heading-medium">
+            {blog?.attributes?.title ||
+              "The Synaptic Growth Index: Quantifying Growth Momentum of Startups Read More"}
+          </h4>
           <div className="flex justify-start mt-2">
             <div
               className='"button-secondary action-button'

@@ -1,0 +1,46 @@
+@mixin xs {
+  @media (max-width: 384px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (max-width: 1526px) {
+    @content;
+  }
+}
+
+@mixin size($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin category($name, $color) {
+  .#{$name} a::before {
+    background-color: $color !important;
+  }
+}

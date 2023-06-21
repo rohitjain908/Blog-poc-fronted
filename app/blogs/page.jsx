@@ -1,6 +1,7 @@
 import axios from "axios";
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/Home.module.scss";
 import BlogThumnail from "./BlogThumbnail";
+
 async function getData() {
   try {
     const res = await axios.get(
@@ -20,6 +21,10 @@ export default async function Blogs() {
         {blogs.data.map((blog) => (
           <BlogThumnail blog={blog} />
         ))}
+        <BlogThumnail />
+        <BlogThumnail />
+        <BlogThumnail />
+        <BlogThumnail />
       </div>
     </div>
   );

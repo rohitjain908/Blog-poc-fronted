@@ -1,4 +1,5 @@
 import axios from "axios";
+import Blog from "./Blogs";
 
 async function getData() {
   try {
@@ -12,7 +13,7 @@ async function getData() {
 async function getBlogData(id) {
   try {
     const res = await axios.get(
-      `http://127.0.0.1:1337/api/blogs/${id}?populate=sections`
+      `http://127.0.0.1:1337/api/blogs/${id}?populate[]=sections&populate[]=thumbnail`
     );
     return res.data;
   } catch (err) {
@@ -22,7 +23,7 @@ async function getBlogData(id) {
 
 export default async function Page({ params }) {
   const blogData = await getBlogData(params.slug);
-  return <h1>My Page</h1>;
+  return <Blog blog={blogData} />;
 }
 
 export async function generateStaticParams() {
