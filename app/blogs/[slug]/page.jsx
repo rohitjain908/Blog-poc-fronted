@@ -10,12 +10,13 @@ async function getData() {
   }
 }
 
-async function getBlogData(id) {
+async function getBlogData(slug) {
   try {
     const res = await axios.get(
-      `http://127.0.0.1:1337/api/blogs/${id}?populate=*`
+      `http://127.0.0.1:1337/api/blogs/?populate=*&filters[slug]=${slug}`
     );
-    return res.data;
+    if (res.data.data?.length) return res.data.data[0];
+    return undefined;
   } catch (err) {
     console.log(err);
   }
@@ -29,6 +30,6 @@ export default async function Page({ params }) {
 export async function generateStaticParams() {
   const blogs = await getData();
   return blogs.data.map((blog) => {
-    return { slug: String(blog.id) };
+    return { slug: String(blog.attributes.slug) };
   });
 }

@@ -62,22 +62,23 @@ export default function Blog({ blog }) {
       }
     }
   }, []);
+  if (!blog) {
+    return <div>No Blog Found</div>;
+  }
   // console.log(blog.data.attributes.thumbnail.data.attributes.url);
   return (
     <div class="mt-[72px] lg:mt-[101px] resource-blog overflowing-stack-ai">
       <div class="table-contents-wrapper">
         <div class="header-text mb-4"> Table of contents: </div>
         <div class="content-body">
-          {blog?.data?.attributes?.sections?.data?.map((section, index) => (
+          {blog?.attributes?.sections?.data?.map((section, index) => (
             <>
               <a href={`#item-${index}`}>
                 <div id={`item-${index}-link`} class="body-item content-text">
                   {section?.attributes?.Heading}
                 </div>
               </a>
-              {index !== blog?.data?.attributes?.sections?.data.length - 1 && (
-                <hr />
-              )}
+              {index !== blog?.attributes?.sections?.data.length - 1 && <hr />}
             </>
           ))}
         </div>
@@ -110,25 +111,25 @@ export default function Blog({ blog }) {
           <div class="text-xs  lg:text-sm text-[#858E9D] font-semibold tracking-[2px]">
             {" "}
             BLOG&nbsp;&nbsp;•&nbsp;&nbsp;
-            {blog?.data?.attributes
-              ? getFormattedDate(blog?.data?.attributes?.date)
+            {blog?.attributes
+              ? getFormattedDate(blog?.attributes?.date)
               : "JAN 2006"}
           </div>
           <h1 class="text-xl  lg:text-7xl mt-1 blog-heading lg:mt-1">
-            {blog?.data?.attributes
-              ? blog?.data?.attributes?.title
+            {blog?.attributes
+              ? blog?.attributes?.title
               : "The Synaptic Growth Index: Quantifying Growth Momentum of Startups"}
           </h1>
           <img
             class="rounded-lg mt-4 lg:mt-10 w-full h-full heading-spacing"
             src={
-              blog?.data?.attributes?.thumbnail?.data?.attributes?.url
-                ? `http://127.0.0.1:1337${blog?.data?.attributes?.thumbnail?.data?.attributes?.url}`
+              blog?.attributes?.thumbnail?.data?.attributes?.url
+                ? `http://127.0.0.1:1337${blog?.attributes?.thumbnail?.data?.attributes?.url}`
                 : "/image-1.webp"
             }
           />
           <div>
-            {blog?.data?.attributes?.sections?.data?.map((section, index) => (
+            {blog?.attributes?.sections?.data?.map((section, index) => (
               <div
                 id={`item-${index}`}
                 class="section-item mb-10"
@@ -146,10 +147,8 @@ export default function Blog({ blog }) {
             ))}
           </div>
           <div className="flex gap-3">
-            {/* {console.log( */}
-            {blog?.data?.attributes?.tags?.data?.map((tag) => (
+            {blog?.attributes?.tags?.data?.map((tag) => (
               <div className="broker-tag text-ellipsis overflow-hidden hover:text-clip">
-                {console.log(tag?.attributes?.title)}
                 {tag?.attributes?.title}
               </div>
             ))}

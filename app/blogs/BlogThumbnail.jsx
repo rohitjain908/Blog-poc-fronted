@@ -6,7 +6,7 @@ export default function BlogThumnail({ blog }) {
     <div className="resource-card flex flex-col xl:transition xl:duration-300 xl:ease-in-out mb-12 first-item">
       <a
         target="_blank"
-        href={`http://localhost:3000/blogs/${blog?.id ? blog?.id : 1}`}
+        href={`http://localhost:3000/blogs/${blog?.attributes?.slug}`}
       >
         <div className="img-container">
           <img
@@ -38,10 +38,8 @@ export default function BlogThumnail({ blog }) {
               "The Synaptic Growth Index: Quantifying Growth Momentum of Startups Read More"}
           </h4>
           <div className="flex gap-3">
-            {/* {console.log( */}
             {blog?.attributes?.tags?.data?.map((tag) => (
               <div className="broker-tag text-ellipsis overflow-hidden hover:text-clip">
-                {console.log(tag?.attributes?.title)}
                 {tag?.attributes?.title}
               </div>
             ))}
