@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import "../styles/main.scss";
-import FiltersBar from './FiltersBar'
+import FiltersBar from './blogs/FiltersBar'
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -11,12 +11,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <div className = 'flex'>
-          <FiltersBar/>
-          <div>
-            {children}
-          </div>
-        </div>
+          {children}
         </body>
     </html>
   );

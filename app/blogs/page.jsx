@@ -1,6 +1,7 @@
 import axios from "axios";
 import styles from "../../styles/Home.module.scss";
 import BlogThumnail from "./BlogThumbnail";
+import FiltersBar from "./FiltersBar";
 
 async function getData() {
   try {
@@ -15,16 +16,19 @@ async function getData() {
 export default async function Blogs() {
   const blogs = await getData();
   return (
-    <div className="max-w-7xl mx-auto">
-      <h1 className="text-center">Blogs</h1>
-      <div className="grid grid-cols-1 xl:grid-cols-3 mt-20 px-6 xl:px-0 flex-row">
-        {blogs.data.map((blog) => (
-          <BlogThumnail blog={blog} />
-        ))}
-        <BlogThumnail />
-        <BlogThumnail />
-        <BlogThumnail />
-        <BlogThumnail />
+    <div className="flex">
+      <FiltersBar/>
+      <div className="max-w-7xl mx-auto">
+          <h1 className="text-center">Blogs</h1>
+          <div className="grid grid-cols-1 xl:grid-cols-3 mt-20 px-6 xl:px-0 flex-row">
+            {blogs.data.map((blog) => (
+              <BlogThumnail blog={blog} />
+            ))}
+            <BlogThumnail />
+            <BlogThumnail />
+            <BlogThumnail />
+            <BlogThumnail />
+          </div>
       </div>
     </div>
   );

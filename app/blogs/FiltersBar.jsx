@@ -1,6 +1,6 @@
 "use client";
-import "../styles/globals.css";
-import "../styles/main.scss";
+import "../../styles/globals.css";
+import "../../styles/main.scss";
 import React, { useState, createContext, useContext } from 'react';
 
 const MyContext = createContext();
@@ -55,7 +55,7 @@ export default function FiltersBar() {
         event.preventDefault()
         //have to show search result on the basis of searchInput
         //console.log("selectedTags ", selectedTags)
-        alert("Searched Input is " + searchInput + " " + selectedTags)
+        alert("Searched Input is " + searchInput + " SelectedFilters are " + selectedTags)
 
     }
 
