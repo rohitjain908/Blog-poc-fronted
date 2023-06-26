@@ -1,3 +1,8 @@
-@import "./_mixin.scss";
-@import "./theme.scss";
-@import "./app.scss";
+@import "_mixin.scss";
+@import "variables/colors.scss";
+@import "fonts.scss";
+@import "variables/typography.scss";
+@import "variables/variables.scss";
+@import "app.scss";
+@import "theme/ico-moon.scss";
+@import "theme/theme.scss";

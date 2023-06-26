@@ -1,4 +1,3 @@
-@import "./_mixin.scss";
 .heading-bold {
   font-family: "Sharp Grotesk Smbold 20", -apple-system, BlinkMacSystemFont,
     "Segoe UI", system-ui;
@@ -21,7 +20,7 @@
   height: 100vh;
   width: 100vw;
   z-index: 10;
-  background-color: black;
+  background-color: $black;
   opacity: 0.2;
   position: absolute;
 }
@@ -385,10 +384,10 @@ h4 {
     margin-left: 4px;
   }
 
-  //   &:hover {
-  //     border-color: $indigo5;
-  //     color: $indigo5;
-  //   }
+  &:hover {
+    border-color: $indigo5;
+    color: $indigo5;
+  }
 
   &:hover .icon-Right-arrow-long {
     transform: translateX(0.5em);
@@ -469,6 +468,45 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.resource-card {
+  margin-right: 48px;
+  cursor: pointer;
+
+  @include xl {
+    margin-right: 0px;
+  }
+
+  &:hover {
+    // transform: scale(102%);
+  }
+
+  @include xl {
+    &:hover {
+      transform: none;
+    }
+  }
+
+  .img-container {
+    border-radius: 16px;
+    height: 200px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+  }
+
+  &.rest-item {
+    .action-button {
+      padding: 0px;
+      border: 0px none;
+    }
+  }
 }
 
 .max-w-200 {
@@ -638,7 +676,7 @@ h4 {
 }
 
 .learn-more-button {
-  border: 1px solid white;
+  border: 1px solid $white;
   border-radius: 4px;
   font-size: 14px;
 

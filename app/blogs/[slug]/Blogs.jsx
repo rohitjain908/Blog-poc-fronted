@@ -46,6 +46,21 @@ export default function Blog({ blog }) {
         }
       });
     });
+
+    const images = document.querySelectorAll("img");
+    // console.log(images);
+    for (const image of images) {
+      const src = image.src;
+      console.log(src);
+      if (src.includes("/uploads")) {
+        // const path = src.
+        const val = src.split("/uploads");
+        image.setAttribute(
+          "src",
+          `http://127.0.0.1:1337/uploads${val[val.length - 1]}`
+        );
+      }
+    }
   }, []);
   // console.log(blog.data.attributes.thumbnail.data.attributes.url);
   return (
@@ -116,12 +131,16 @@ export default function Blog({ blog }) {
             {blog?.data?.attributes?.sections?.data?.map((section, index) => (
               <div
                 id={`item-${index}`}
-                class="section-item"
-                // dangerouslySetInnerHTML={{ __html: section.attributes.Body }}
+                class="section-item mb-10"
+                // dangerouslySetInnerHTML={{
+                //   __html: section.attributes.description,
+                // }}
               >
                 <ReactMarkDown
                   rehypePlugins={[rehypeRaw]}
-                  children={section.attributes.Body}
+                  children={
+                    section.attributes.Body || section.attributes.description
+                  }
                 />
               </div>
             ))}

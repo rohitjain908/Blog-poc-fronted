@@ -1,0 +1,494 @@
+@font-face {
+  font-family: "synaptic";
+  src: url("/fonts/synaptic.eot");
+  src: url("/fonts/synaptic.eot") format("embedded-opentype"),
+    url("/fonts/synaptic.ttf") format("truetype"),
+    url("/fonts/synaptic.woff") format("woff"),
+    url("/fonts/synaptic.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "synaptic" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-affinity:before {
+  content: "\e900";
+}
+.icon-Africa:before {
+  content: "\e901";
+  color: #47556c;
+}
+.icon-Airbnb:before {
+  content: "\e902";
+}
+.icon-Alert-lined:before {
+  content: "\e903";
+}
+.icon-Alert:before {
+  content: "\e904";
+}
+.icon-Alexa:before {
+  content: "\e905";
+}
+.icon-All-companies:before {
+  content: "\e906";
+}
+.icon-All-question:before {
+  content: "\e907";
+}
+.icon-Analysts:before {
+  content: "\e908";
+}
+.icon-Android:before {
+  content: "\e909";
+  color: #47556c;
+}
+.icon-Antarctica:before {
+  content: "\e90a";
+  color: #47556c;
+}
+.icon-App-Store:before {
+  content: "\e90b";
+}
+.icon-Apple:before {
+  content: "\e90c";
+  color: #47556c;
+}
+.icon-ascending:before {
+  content: "\e90d";
+}
+.icon-Asia:before {
+  content: "\e90e";
+  color: #47556c;
+}
+.icon-Attachment:before {
+  content: "\e90f";
+}
+.icon-Australia:before {
+  content: "\e910";
+  color: #47556c;
+}
+.icon-Bell:before {
+  content: "\e911";
+}
+.icon-Bell1:before {
+  content: "\e912";
+}
+.icon-Bin:before {
+  content: "\e913";
+}
+.icon-block:before {
+  content: "\e914";
+}
+.icon-Bookmark_line:before {
+  content: "\e915";
+}
+.icon-Bookmark:before {
+  content: "\e916";
+}
+.icon-Bulb:before {
+  content: "\e917";
+  color: #42526e;
+}
+.icon-Bulb1:before {
+  content: "\e918";
+}
+.icon-Calendar:before {
+  content: "\e919";
+}
+.icon-Camera:before {
+  content: "\e91a";
+}
+.icon-Chat:before {
+  content: "\e91b";
+}
+.icon-Check:before {
+  content: "\e91c";
+}
+.icon-Chinese-apps:before {
+  content: "\e91d";
+}
+.icon-clock:before {
+  content: "\e91e";
+}
+.icon-Copper:before {
+  content: "\e91f";
+}
+.icon-Credit-card:before {
+  content: "\e920";
+}
+.icon-Cross-lined:before {
+  content: "\e921";
+}
+.icon-Cross:before {
+  content: "\e922";
+}
+.icon-Crossover:before {
+  content: "\e923";
+}
+.icon-Crunchbase:before {
+  content: "\e924";
+}
+.icon-Crypto-community:before {
+  content: "\e925";
+}
+.icon-Crypto-exchanges:before {
+  content: "\e926";
+}
+.icon-Crypto-indexes:before {
+  content: "\e927";
+}
+.icon-Crypto-market:before {
+  content: "\e928";
+}
+.icon-customise:before {
+  content: "\e929";
+}
+.icon-Dashboards:before {
+  content: "\e92a";
+}
+.icon-data-cube:before {
+  content: "\e92b";
+}
+.icon-descending:before {
+  content: "\e92c";
+}
+.icon-Desktop:before {
+  content: "\e92d";
+}
+.icon-Dot:before {
+  content: "\e92e";
+}
+.icon-Down-arrow-long:before {
+  content: "\e92f";
+}
+.icon-Down-twice:before {
+  content: "\e930";
+}
+.icon-Down:before {
+  content: "\e931";
+}
+.icon-Download:before {
+  content: "\e932";
+}
+.icon-Downmark:before {
+  content: "\e933";
+}
+.icon-Early-stage-discovery:before {
+  content: "\e934";
+}
+.icon-Europe:before {
+  content: "\e935";
+  color: #47556c;
+}
+.icon-Events:before {
+  content: "\e936";
+}
+.icon-Eye-Hide:before {
+  content: "\e937";
+}
+.icon-Eye-Open:before {
+  content: "\e938";
+}
+.icon-Facebook:before {
+  content: "\e939";
+}
+.icon-Filter:before {
+  content: "\e93a";
+}
+.icon-Financials:before {
+  content: "\e93b";
+}
+.icon-Flag:before {
+  content: "\e93c";
+}
+.icon-Folder:before {
+  content: "\e93d";
+}
+.icon-Food-delivery:before {
+  content: "\e93e";
+}
+.icon-Food-transaction:before {
+  content: "\e93f";
+}
+.icon-Glassdoor:before {
+  content: "\e940";
+}
+.icon-Globe:before {
+  content: "\e941";
+}
+.icon-Google-trends:before {
+  content: "\e942";
+}
+.icon-Graph-playground:before {
+  content: "\e943";
+}
+.icon-Growth-benchmarking:before {
+  content: "\e944";
+}
+.icon-IndexIO:before {
+  content: "\e945";
+}
+.icon-Info:before {
+  content: "\e946";
+}
+.icon-Info1:before {
+  content: "\e947";
+}
+.icon-Left-arrow-long:before {
+  content: "\e948";
+}
+.icon-Left-Diagonal:before {
+  content: "\e949";
+}
+.icon-Left-Solid:before {
+  content: "\e94a";
+}
+.icon-Left:before {
+  content: "\e94b";
+}
+.icon-Like:before {
+  content: "\e94c";
+}
+.icon-Line-chart:before {
+  content: "\e94d";
+}
+.icon-Link:before {
+  content: "\e94e";
+}
+.icon-Linked_in:before {
+  content: "\e94f";
+}
+.icon-Linkedin:before {
+  content: "\e950";
+}
+.icon-List-Staggered:before {
+  content: "\e951";
+}
+.icon-Lists:before {
+  content: "\e952";
+}
+.icon-Location:before {
+  content: "\e953";
+}
+.icon-Location1:before {
+  content: "\e954";
+}
+.icon-Lock:before {
+  content: "\e955";
+}
+.icon-Logomark:before {
+  content: "\e956";
+}
+.icon-Logout:before {
+  content: "\e957";
+}
+.icon-Mentions:before {
+  content: "\e958";
+}
+.icon-minus:before {
+  content: "\e959";
+}
+.icon-Mobile-Apps:before {
+  content: "\e95a";
+}
+.icon-Mobile:before {
+  content: "\e95b";
+}
+.icon-Money:before {
+  content: "\e95c";
+}
+.icon-Money1:before {
+  content: "\e95d";
+}
+.icon-More:before {
+  content: "\e95e";
+}
+.icon-New-question:before {
+  content: "\e95f";
+}
+.icon-North-America:before {
+  content: "\e960";
+  color: #47556c;
+}
+.icon-Organisation:before {
+  content: "\e961";
+}
+.icon-Outlier-Negative:before {
+  content: "\e962";
+}
+.icon-Outlier-Positive:before {
+  content: "\e963";
+}
+.icon-Ownership:before {
+  content: "\e964";
+}
+.icon-Pencil:before {
+  content: "\e965";
+}
+.icon-Pitchbook:before {
+  content: "\e966";
+}
+.icon-Play:before {
+  content: "\e967";
+}
+.icon-Playstore:before {
+  content: "\e968";
+}
+.icon-Plus:before {
+  content: "\e969";
+}
+.icon-Product-reviews:before {
+  content: "\e96a";
+}
+.icon-Pulse:before {
+  content: "\e96b";
+}
+.icon-Quest-mobile:before {
+  content: "\e96c";
+}
+.icon-Reset:before {
+  content: "\e96d";
+}
+.icon-Right-arrow-long:before {
+  content: "\e96e";
+}
+.icon-Right-Diagonal:before {
+  content: "\e96f";
+}
+.icon-Right-Solid:before {
+  content: "\e970";
+}
+.icon-Right:before {
+  content: "\e971";
+}
+.icon-Round-Add:before {
+  content: "\e972";
+}
+.icon-Round-Close:before {
+  content: "\e973";
+}
+.icon-Salesforce:before {
+  content: "\e974";
+}
+.icon-Save-Lined:before {
+  content: "\e975";
+}
+.icon-Save:before {
+  content: "\e976";
+}
+.icon-Search:before {
+  content: "\e977";
+}
+.icon-Searchmetrics:before {
+  content: "\e978";
+}
+.icon-SEC-filing:before {
+  content: "\e979";
+}
+.icon-Sector:before {
+  content: "\e97a";
+}
+.icon-Semrush:before {
+  content: "\e97b";
+}
+.icon-Seo:before {
+  content: "\e97c";
+}
+.icon-Setting-lined:before {
+  content: "\e97d";
+}
+.icon-Setting:before {
+  content: "\e97e";
+}
+.icon-Share:before {
+  content: "\e97f";
+}
+.icon-Slack:before {
+  content: "\e980";
+}
+.icon-Sort:before {
+  content: "\e981";
+}
+.icon-South-America:before {
+  content: "\e982";
+  color: #47556c;
+}
+.icon-Spinner:before {
+  content: "\e983";
+}
+.icon-Stage:before {
+  content: "\e984";
+}
+.icon-Star-lined:before {
+  content: "\e985";
+}
+.icon-Star:before {
+  content: "\e986";
+}
+.icon-Thumbs-Down:before {
+  content: "\e987";
+}
+.icon-Thumbs-Up:before {
+  content: "\e988";
+}
+.icon-Transcripts:before {
+  content: "\e989";
+}
+.icon-Trophy:before {
+  content: "\e98a";
+}
+.icon-Tv:before {
+  content: "\e98b";
+}
+.icon-Twitch:before {
+  content: "\e98c";
+}
+.icon-Twitter:before {
+  content: "\e98d";
+}
+.icon-Unlink:before {
+  content: "\e98e";
+}
+.icon-Unlock:before {
+  content: "\e98f";
+}
+.icon-Up-arrow-long:before {
+  content: "\e990";
+}
+.icon-Up-twice:before {
+  content: "\e991";
+}
+.icon-Up:before {
+  content: "\e992";
+}
+.icon-Upmark:before {
+  content: "\e993";
+}
+.icon-User:before {
+  content: "\e994";
+}
+.icon-Website:before {
+  content: "\e995";
+}
+.voilet-medium {
+  color: #5865f5;
+}
+.voilet-medium-background {
+  background: #5865f5;
+}
