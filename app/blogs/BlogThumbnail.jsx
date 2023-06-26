@@ -37,6 +37,15 @@ export default function BlogThumnail({ blog }) {
             {blog?.attributes?.title ||
               "The Synaptic Growth Index: Quantifying Growth Momentum of Startups Read More"}
           </h4>
+          <div className="flex gap-3">
+            {/* {console.log( */}
+            {blog?.attributes?.tags?.data?.map((tag) => (
+              <div className="broker-tag text-ellipsis overflow-hidden hover:text-clip">
+                {console.log(tag?.attributes?.title)}
+                {tag?.attributes?.title}
+              </div>
+            ))}
+          </div>
           <div className="flex justify-start mt-2">
             <div
               className='"button-secondary action-button'

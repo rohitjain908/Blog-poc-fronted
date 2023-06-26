@@ -103,3 +103,16 @@ button {
     transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 }
+
+.broker-tag {
+  background: #b8dcdb;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 5px 10px;
+  margin: 3px 0;
+  border-radius: 6px;
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+}

@@ -145,6 +145,15 @@ export default function Blog({ blog }) {
               </div>
             ))}
           </div>
+          <div className="flex gap-3">
+            {/* {console.log( */}
+            {blog?.data?.attributes?.tags?.data?.map((tag) => (
+              <div className="broker-tag text-ellipsis overflow-hidden hover:text-clip">
+                {console.log(tag?.attributes?.title)}
+                {tag?.attributes?.title}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

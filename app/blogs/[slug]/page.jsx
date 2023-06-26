@@ -13,7 +13,7 @@ async function getData() {
 async function getBlogData(id) {
   try {
     const res = await axios.get(
-      `http://127.0.0.1:1337/api/blogs/${id}?populate[]=sections&populate[]=thumbnail`
+      `http://127.0.0.1:1337/api/blogs/${id}?populate=*`
     );
     return res.data;
   } catch (err) {
