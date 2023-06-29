@@ -46,7 +46,7 @@ export default function BlogThumnail({ blog }) {
           </div>
           <div className="flex justify-start mt-2">
             <div
-              className='"button-secondary action-button'
+              className="button-secondary action-button"
               style={{ padding: "0px", border: 0 }}
             >
               Read More

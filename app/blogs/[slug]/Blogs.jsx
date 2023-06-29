@@ -68,6 +68,7 @@ export default function Blog({ blog }) {
   // console.log(blog.data.attributes.thumbnail.data.attributes.url);
   return (
     <div class="mt-[72px] lg:mt-[101px] resource-blog overflowing-stack-ai">
+      <div className="hidden xl:block"></div>
       <div class="table-contents-wrapper">
         <div class="header-text mb-4"> Table of contents: </div>
         <div class="content-body">

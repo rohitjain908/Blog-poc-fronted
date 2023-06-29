@@ -1,9 +1,10 @@
 import axios from "axios";
 import Blog from "./Blogs";
+import { SERVERURL } from "../../../config";
 
 async function getData() {
   try {
-    const res = await axios.get(`http://127.0.0.1:1337/api/blogs`);
+    const res = await axios.get(`${SERVERURL}/blogs`);
     return res.data;
   } catch (err) {
     console.log(err);
@@ -13,7 +14,7 @@ async function getData() {
 async function getBlogData(slug) {
   try {
     const res = await axios.get(
-      `http://127.0.0.1:1337/api/blogs/?populate=*&filters[slug]=${slug}`
+      `${SERVERURL}/blogs/?populate=*&filters[slug]=${slug}`
     );
     if (res.data.data?.length) return res.data.data[0];
     return undefined;
